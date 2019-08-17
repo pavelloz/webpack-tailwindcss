@@ -9,7 +9,7 @@ This simplistic boilerplate is meant to help you start your project based on Web
 * CSS extration using `mini-css-extract-plugin`
 
 ## Its PostCSS part includes:
-* Official TailwindCSS Custom Forms plugin
+* Official [TailwindCSS Custom Forms](https://tailwindcss-custom-forms.netlify.com/) plugin
 * [PurgeCSS](https://github.com/FullHuman/postcss-purgecss) configured with example of js files in src/ and liquid files in app/ and modules/ - only in webpack's production mode. In dev mode you have all classes available (all 732KB of them), but you deploy to production only the ones you use (in my case, 2.5KB, most of it is `normalize.css`)
 * [autoprefixer](https://github.com/postcss/autoprefixer) - Adding vendor prefixes
 * [postcss-import](https://github.com/postcss/postcss-import) - Support for @imports
@@ -23,7 +23,6 @@ This simplistic boilerplate is meant to help you start your project based on Web
 * I highly recommend
 
 ## Resources
-
 When working with TailwindCSS i found very useful resources:
 * [Tailwind.run](https://tailwind.run/new) - sandbox for quick mocking.
 * [Cheat sheet](https://nerdcave.com/tailwind-cheat-sheet) - with search. hopefully will be updated to the latest version soon
