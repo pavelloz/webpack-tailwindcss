@@ -1,0 +1,10 @@
+# General
+node_modules/
+.env
+
+# Webpack generated assets
+app/assets/css/*
+app/assets/js/*
+
+# OS junk
+.DS_Store
