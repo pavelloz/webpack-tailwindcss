@@ -11,7 +11,7 @@ module.exports = () => {
       require('postcss-fixes'),
       require('postcss-import'),
       require('tailwindcss'),
-      prod ? require('autoprefixer') : undefined, // aint nobody got time for dat
+      require('autoprefixer'),
       prod ? purgecss : undefined // make sure all the classes are present in dev
     ]
   };

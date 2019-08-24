@@ -20,7 +20,6 @@ This simplistic boilerplate is meant to help you start your project based on Web
 * There is no SASS
 * Images, fonts, etc. are not handled by webpack. I just put them into the dist directory in `fonts/`, `img/`.
 * Before you build using `npm run build` task, everything in `app/assets/js` and `app/assets/css` is removed to keep the deploys clean
-* I highly recommend
 
 ## Resources
 When working with TailwindCSS i found very useful resources:
