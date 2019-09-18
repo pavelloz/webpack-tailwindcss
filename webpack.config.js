@@ -35,7 +35,7 @@ const config = {
     ]
   },
   optimization: {
-    minimizer: [new OptimizeCSSAssetsPlugin({}), new TerserPlugin({ parallel: true, cache: true })]
+    minimizer: [new OptimizeCSSAssetsPlugin({}), new TerserPlugin({ parallel: true, cache: true, extractComments: false })]
   },
   plugins: [
     new MiniCssExtractPlugin({
