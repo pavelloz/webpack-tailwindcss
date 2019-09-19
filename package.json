@@ -1,9 +1,10 @@
 {
   "scripts": {
     "clean": "rm -rf app/assets/{css,js}/*",
-    "deploy": "pos-cli deploy",
     "start": "npm run clean && npx webpack-cli -w",
-    "build": "npm run clean && NODE_ENV=production npx webpack-cli"
+    "build": "npm run clean && NODE_ENV=production npx webpack-cli",
+    "build:dev": "npm run clean && NODE_ENV=development npx webpack-cli",
+    "bs": "npx browser-sync start --files app/* --reload-delay 500 --proxy"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.0",
@@ -15,6 +16,7 @@
     "@tailwindcss/custom-forms": "^0.2.1",
     "autoprefixer": "^9.6.1",
     "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.7",
     "css-loader": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "optimize-css-assets-webpack-plugin": "^5.0.3",
