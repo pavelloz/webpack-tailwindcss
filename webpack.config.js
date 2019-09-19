@@ -12,8 +12,7 @@ const config = {
   output: {
     filename: 'js/[name].js',
     chunkFilename: 'js/[name].[chunkhash:3].js',
-    path: path.resolve('app/assets'),
-    publicPath: '/assets/'
+    path: path.resolve('app/assets')
   },
   bail: true,
   stats: {
