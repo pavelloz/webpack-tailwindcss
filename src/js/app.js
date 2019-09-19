@@ -1,5 +1,5 @@
 import '../css/app.css';
 
-import('./dynamic_import').then(module => module.default());
+import(/* webpackChunkName: "myModule", webpackPrefetch: true */ './dynamic_import').then(module => module.default());
 
-console.log('hello world');
+console.log('Hello from app.js');
