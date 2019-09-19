@@ -35,7 +35,12 @@ const config = {
     ]
   },
   optimization: {
-    minimizer: [new OptimizeCSSAssetsPlugin({}), new TerserPlugin({ parallel: true, cache: true, extractComments: false })]
+    minimizer: [new OptimizeCSSAssetsPlugin({}), new TerserPlugin({ parallel: true, cache: true, extractComments: false })],
+    splitChunks: {
+      cacheGroups: {
+        vendors: false // Do not emit vendors~* files that are almost empty in this setup
+      }
+    }
   },
   plugins: [
     new MiniCssExtractPlugin({
