@@ -1,7 +1,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 const prod = process.env.NODE_ENV === 'production';
 
@@ -34,7 +33,7 @@ const config = {
     ]
   },
   optimization: {
-    minimizer: [new OptimizeCSSAssetsPlugin({}), new TerserPlugin({ parallel: true, cache: true, extractComments: false })],
+    minimizer: [new TerserPlugin({ parallel: true, cache: true, extractComments: false })],
     splitChunks: {
       cacheGroups: {
         vendors: false // Do not emit vendors~* files that are almost empty in this setup

@@ -23,6 +23,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // `gs` prefix will create classes like text-gs-red
+        // Remove `gs` if you dont want prefix
         gs: {
           ...brandColors,
           ...systemColors
@@ -31,7 +33,7 @@ module.exports = {
       fontFamily: {
         sans: [
           'Lato',
-          ...defaultTheme.fontFamily.sans,
+          ...defaultTheme.fontFamily.sans
         ]
       },
       screens: {

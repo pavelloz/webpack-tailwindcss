@@ -1,8 +1,11 @@
+
 const purgecss = require('@fullhuman/postcss-purgecss')({
   content: ['./app/**/*.liquid', './modules/**/*.liquid', './src/js/**/*.js'],
 
   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
 });
+
+const csso = require('postcss-csso')({ comments: false });
 
 module.exports = () => {
   const prod = process.env.NODE_ENV === 'production';
@@ -12,7 +15,8 @@ module.exports = () => {
       require('postcss-import'),
       require('tailwindcss'),
       require('autoprefixer'),
-      prod ? purgecss : undefined // make sure all the classes are present in dev
+      prod ? purgecss : undefined,
+      prod ? csso : undefined // keep csso after purgecss, or it will break
     ]
   };
 };

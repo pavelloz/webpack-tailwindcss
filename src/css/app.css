@@ -1,8 +1,5 @@
 @import "tailwindcss/base";
 
-@import "./theme/fonts";
-
 @import "tailwindcss/components";
-
 
 @import "tailwindcss/utilities";
