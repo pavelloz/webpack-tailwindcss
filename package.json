@@ -29,7 +29,7 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   },
-  "browserslist": "> 1%, last 2 Safari versions, last 2 Firefox versions, not IE 10",
+  "browserslist": "> 1% or last 2 years",
   "name": "webpack-tailwindcss-purgecss",
   "version": "1.0.0",
   "description": "Webpack + TailwindCSS + PurgeCSS boilerplate",
