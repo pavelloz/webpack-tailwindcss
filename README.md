@@ -1,6 +1,8 @@
 # webpack-tailwindcss-purgecss
 
-This simplistic boilerplate is meant to help you start your project based on Webpack + TailwindCSS without too much complication.
+This template is meant to help you start your project based on Webpack + TailwindCSS without too much complication.
+
+To use this template, click "Use this template" green button in the top right.
 
 ## Its webpack part includes:
 * ES6 -> ES5 compilation using `babel-loader`
