@@ -15,10 +15,10 @@ const config = {
   },
   bail: true,
   stats: {
-    modules: false,
-    hash: false,
     assetsSort: '!size',
-    children: false
+    builtAt: false,
+    children: false,
+    modules: false
   },
   module: {
     rules: [
