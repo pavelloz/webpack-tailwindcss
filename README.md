@@ -46,6 +46,6 @@ To use this template, click "Use this template" green button in the top right.
 
 Some help in regards to different parts of this setup:
 * [BrowserSync documentation](https://www.browsersync.io/docs/command-line) - learn how to tweak browser-sync to your needs
-* [Webpack dynamic imports](https://medium.com/front-end-weekly/webpack-and-dynamic-imports-doing-it-right-72549ff49234) - How and why do the dynamic imports. See [`js/app.js`](pavelloz/webpack-tailwindcss-purgecss/blob/master/src/js/app.js) for example.
+* [Webpack dynamic imports](https://medium.com/front-end-weekly/webpack-and-dynamic-imports-doing-it-right-72549ff49234) - How and why do the dynamic imports. See [`js/app.js`](src/js/app.js) for example.
 
 ## Happy coding!
