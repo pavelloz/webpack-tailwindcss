@@ -11,6 +11,7 @@ To use this template, click "Use this template" green button in the top right.
 * 3 character chunkhash added to chunks, but not to main assets files (very easy to add it)
 * Compact stats info after build
 * Prefetch of a chunk as an example
+* Example of naming chunks to know which chunk contains what (instead of numbers/hashes)
 
 ## PostCSS setup includes
 * [PurgeCSS](https://github.com/FullHuman/postcss-purgecss) configured with example of js files in `src/` and liquid files in `app/` and `modules/` - only in webpack's production mode. In dev mode all classes available (732KB+ of them), but production build cleans CSS to contain only used ones (in my case ~2.5KB, most of it from `normalize.css`)
