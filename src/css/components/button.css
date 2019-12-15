@@ -1,0 +1,3 @@
+.btn {
+  @apply font-bold capitalize px-4 py-2 border rounded-sm;
+}

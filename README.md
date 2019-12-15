@@ -2,7 +2,20 @@
 
 This template is meant to help you start your project based on Webpack + TailwindCSS without too much complication.
 
-To use this template, click "Use this template" green button in the top right.
+## Usage
+
+1) To use this template, click "Use this template" green button in the top right.
+2) Clone your repo as you normally would.
+3) Install dependencies - `npm install`
+4) Configure where your views are in [postcss.config.js](https://github.com/pavelloz/webpack-tailwindcss-purgecss/blob/master/postcss.config.js).
+
+You are now ready to build your assets using npm tasks.
+
+## npm tasks
+* `npm start` - runs webpack in watch mode
+* `npm run build` - build assets in production mode, minified, unused CSS classes purged
+* `npm run build:dev` - build assets in development mode, unminified, full TailwindCSS
+* `npm run bs <url>` - runs browser-sync on `<url>` and opens it in your browser. Watches for changes in `app/*`
 
 ## webpack setup includes
 * ES6 -> ES5 transpilation using `babel` with `babel-preset-env`
@@ -27,13 +40,6 @@ To use this template, click "Use this template" green button in the top right.
 * How to set a different font as first in font family declaration
 * `xxl` breakpoint for responsive purposes
 * `hover` variant to borderWidth (allows you to change border width on element hover using TailwindCSS)
-
-
-## npm tasks
-* `npm start` - runs webpack in watch mode
-* `npm run build` - build assets in production mode, minified, unused CSS classes purged
-* `npm run build:dev` - build assets in development mode, unminified, full TailwindCSS
-* `npm run bs <url>` - runs browser-sync on `<url>` and opens it in your browser. Watches for changes in `app/*`
 
 ## Notes
 * Images, fonts, etc. are not handled by webpack. I just put them into the dist directory in `fonts/`, `img/`.

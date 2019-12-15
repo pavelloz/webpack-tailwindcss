@@ -1,6 +1,7 @@
-
 const purgecss = require('@fullhuman/postcss-purgecss')({
-  content: ['./app/**/*.liquid', './modules/**/*.liquid', './src/js/**/*.js'],
+  // Make sure to configure your own paths here.
+  // You need to point to files that will contain tailwind classes
+  content: ['./app/**/*.liquid', './src/js/**/*.js'],
 
   defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
 });
