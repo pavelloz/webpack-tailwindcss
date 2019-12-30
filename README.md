@@ -55,4 +55,9 @@ Some help in regards to different parts of this setup:
 * [BrowserSync documentation](https://www.browsersync.io/docs/command-line) - learn how to tweak browser-sync to your needs
 * [Webpack dynamic imports](https://medium.com/front-end-weekly/webpack-and-dynamic-imports-doing-it-right-72549ff49234) - How and why do the dynamic imports. See [`js/app.js`](src/js/app.js) for example.
 
+## TODO
+1) Prepare sirv example with autoreload (update purgecss config)
+2) Use webpack-dev-server instead of browsersync because of point 1
+3) Test `cacheGroups` current setting, deeper
+
 ## Happy coding!
