@@ -1,10 +1,9 @@
 {
   "scripts": {
-    "clean": "rm -rf app/assets/{css,js}/*",
-    "start": "npm run clean && npx webpack-cli -w",
+    "clean": "rm -rf app/*",
+    "start": "webpack-dev-server",
     "build": "npm run clean && NODE_ENV=production npx webpack-cli",
-    "build:dev": "npm run clean && NODE_ENV=development npx webpack-cli",
-    "bs": "npx browser-sync start --files app/* --reload-delay 500 --proxy"
+    "build:dev": "npm run clean && NODE_ENV=development npx webpack-cli"
   },
   "devDependencies": {
     "@babel/cli": "^7.7.7",
@@ -16,7 +15,7 @@
     "@tailwindcss/custom-forms": "^0.2.1",
     "autoprefixer": "^9.7.3",
     "babel-loader": "^8.0.6",
-    "browser-sync": "^2.26.7",
+    "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.4.1",
     "mini-css-extract-plugin": "^0.9.0",
     "postcss": "^7.0.26",
@@ -27,7 +26,8 @@
     "tailwindcss": "^1.1.4",
     "terser-webpack-plugin": "^2.3.1",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
   },
   "browserslist": "> 1% or last 2 years",
   "name": "webpack-tailwindcss-purgecss",

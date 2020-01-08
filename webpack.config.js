@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const prod = process.env.NODE_ENV === 'production';
 
@@ -12,6 +13,12 @@ const config = {
     filename: 'js/[name].js',
     chunkFilename: 'js/[name].[chunkhash:3].js',
     path: path.resolve('app/assets')
+  },
+  devServer: {
+    contentBase: path.resolve(__dirname, 'app'),
+    watchContentBase: true,
+    writeToDisk: true,
+    open: true
   },
   bail: true,
   stats: {
@@ -43,7 +50,10 @@ const config = {
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'css/[name].css'
-    })
+    }),
+    new CopyPlugin([
+      { from: 'src/index.html', to: 'index.html' },
+    ]),
   ],
   mode: prod ? 'production' : 'development'
 };

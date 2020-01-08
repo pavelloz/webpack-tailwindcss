@@ -1,29 +1,24 @@
 # webpack-tailwindcss-purgecss
 
-This template is meant to help you start your project based on Webpack + TailwindCSS without too much complication.
+This template is made to help start your project based on Webpack + TailwindCSS without too much complication while keeping best performance practices set up, so you dont have to worry about basics.
 
 ## Usage
 
 1) To use this template, click "Use this template" green button in the top right.
-2) Clone your repo as you normally would.
-3) Install dependencies - `npm install`
-4) Configure where your views are in [postcss.config.js](https://github.com/pavelloz/webpack-tailwindcss-purgecss/blob/master/postcss.config.js).
-
-You are now ready to build your assets using npm tasks.
+2) Install dependencies - `npm install`
+3) Configure where your views are in [postcss.config.js](https://github.com/pavelloz/webpack-tailwindcss-purgecss/blob/master/postcss.config.js).
 
 ## npm tasks
-* `npm start` - runs webpack in watch mode
+* `npm start` - runs `webpack-dev-server` on `http://localhost:8080` and reloads on changes in `src/`
 * `npm run build` - build assets in production mode, minified, unused CSS classes purged
-* `npm run build:dev` - build assets in development mode, unminified, full TailwindCSS
-* `npm run bs <url>` - runs browser-sync on `<url>` and opens it in your browser. Watches for changes in `app/*`
+* `npm run build:dev` - build assets in development mode, unminified (full TailwindCSS)
 
 ## webpack setup includes
 * ES6 -> ES5 transpilation using `babel` with `babel-preset-env`
 * JS minification using `terser-webpack-plugin`
 * CSS extration using `mini-css-extract-plugin`
-* 3 character chunkhash added to chunks, but not to main assets files (very easy to add it)
-* Compact stats info after build
-* Prefetch of a chunk as an example
+* 3 character chunkhash added to chunks, but not to entry files
+* Prefetched chunk as an example
 * Example of naming chunks to know which chunk contains what (instead of numbers/hashes)
 
 ## PostCSS setup includes
@@ -49,15 +44,12 @@ You are now ready to build your assets using npm tasks.
 
 * [Tailwind.run](https://tailwind.run/new) - sandbox for quickly mocking/debugging components in isolation
 * [TailwindCSS Cheat Sheet](https://nerdcave.com/tailwind-cheat-sheet) - with search. Hopefully will be updated to the latest TailwindCSS version soon
-* [VSCode IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - Use [sissel.shopify-liquid](https://marketplace.visualstudio.com/items?itemName=sissel.shopify-liquid) Liquid plugin to increase your chance of it working
-
-Some help in regards to different parts of this setup:
-* [BrowserSync documentation](https://www.browsersync.io/docs/command-line) - learn how to tweak browser-sync to your needs
+* [VSCode IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - Custom config aware autocomplete for TailwindCSS
 * [Webpack dynamic imports](https://medium.com/front-end-weekly/webpack-and-dynamic-imports-doing-it-right-72549ff49234) - How and why do the dynamic imports. See [`js/app.js`](src/js/app.js) for example.
 
 ## TODO
-1) Prepare sirv example with autoreload (update purgecss config)
-2) Use webpack-dev-server instead of browsersync because of point 1
+~~1) Prepare sirv example with autoreload (update purgecss config)~~ - DONE
+~~2) Use webpack-dev-server instead of browsersync because of point 1~~ - DONE
 3) Test `cacheGroups` current setting, deeper
 
 ## Happy coding!
