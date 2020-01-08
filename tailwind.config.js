@@ -1,40 +1,26 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 const brandColors = {
-  'green-light': '#14ddaa',
-  'green-mid': '#179c7b',
-  'green-dark': '#2b322b',
-  'soft-grey': '#f0f3f6',
-  'mid-grey': '#ced8e1',
-  'grey': '#7b838a',
-  'dark-grey': '#333333'
+  green: '#2b322b'
 };
 
 const systemColors = {
-  'blue': '#007aff',
-  'light-blue': '#5bc8fa',
-  'red': '#ff3a30',
-  'orange': '#ff9e0b',
-  'yellow': '#ffd70b',
-  'purple': '#bf59f2'
+  blue: '#007aff'
 };
 
 module.exports = {
   theme: {
     extend: {
       colors: {
-        // `gs` prefix will create classes like text-gs-red
-        // Remove `gs` if you dont want prefix
-        gs: {
+        // `ex` prefix will create classes like `text-ex-red`
+        // Remove `ex` if you dont want prefix
+        ex: {
           ...brandColors,
           ...systemColors
         }
       },
       fontFamily: {
-        sans: [
-          'Lato',
-          ...defaultTheme.fontFamily.sans
-        ]
+        sans: ['Lato', ...defaultTheme.fontFamily.sans]
       },
       screens: {
         xxl: '1410px'
@@ -44,7 +30,5 @@ module.exports = {
   variants: {
     borderWidth: ['responsive', 'hover']
   },
-  plugins: [
-    require('@tailwindcss/custom-forms')
-  ]
+  plugins: [require('@tailwindcss/custom-forms')]
 };
