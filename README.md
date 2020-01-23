@@ -49,7 +49,9 @@ This template is made to help start your project based on Webpack + TailwindCSS 
 
 ## TODO
 ~~1) Prepare sirv example with autoreload (update purgecss config)~~ - DONE
+
 ~~2) Use webpack-dev-server instead of browsersync because of point 1~~ - DONE
+
 3) Test `cacheGroups` current setting, deeper
 
 ## Happy coding!
