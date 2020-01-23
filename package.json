@@ -1,9 +1,9 @@
 {
   "scripts": {
-    "clean": "rm -rf app/*",
+    "clean": "npx del-cli app/*",
     "start": "webpack-dev-server",
-    "build": "npm run clean && NODE_ENV=production npx webpack-cli",
-    "build:dev": "npm run clean && NODE_ENV=development npx webpack-cli"
+    "build": "npm run clean && cross-env NODE_ENV=production npx webpack-cli",
+    "build:dev": "npm run clean && cross-env NODE_ENV=development npx webpack-cli"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.0",
@@ -16,7 +16,9 @@
     "autoprefixer": "^9.7.3",
     "babel-loader": "^8.0.6",
     "copy-webpack-plugin": "^5.1.1",
+    "cross-env": "^6.0.3",
     "css-loader": "^3.4.2",
+    "del-cli": "^3.0.0",
     "mini-css-extract-plugin": "^0.9.0",
     "postcss": "^7.0.26",
     "postcss-csso": "^4.0.0",
