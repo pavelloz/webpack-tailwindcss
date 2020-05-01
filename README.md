@@ -54,4 +54,6 @@ This template is made to help start your project based on Webpack + TailwindCSS 
 
 3) Test `cacheGroups` current setting, deeper
 
+4) Use purgeCSS used in Tailwind config instead of postcss config
+
 ## Happy coding!
