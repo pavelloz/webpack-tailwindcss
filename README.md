@@ -22,13 +22,13 @@ This template is made to help start your project based on Webpack + TailwindCSS 
 * Example of naming chunks to know which chunk contains what (instead of numbers/hashes)
 
 ## PostCSS setup includes
-* [PurgeCSS](https://github.com/FullHuman/postcss-purgecss) configured with example of js files in `src/` and liquid files in `app/` and `modules/` - only in webpack's production mode. In dev mode all classes available (732KB+ of them), but production build cleans CSS to contain only used ones (in my case ~2.5KB, most of it from `normalize.css`)
 * [autoprefixer](https://github.com/postcss/autoprefixer) - Adding vendor prefixes, just in case. See package.json for `browserslist` config
 * [postcss-csso](https://github.com/lahmatiy/postcss-csso) - Minifying your css for you
 * [postcss-import](https://github.com/postcss/postcss-import) - Support for @imports - just like in SASS
 * [postcss-fixes](https://github.com/MattDiMu/postcss-fixes) - Various fixes improving your CSS cross-browser compatibility
 
 ## TailwindCSS setup includes
+* PurgingCSS configured with example of js files in `src/` and liquid files in `app/` and `modules/` - only in webpack's production mode. In dev mode all classes available (732KB+ of them), but production build cleans CSS to contain only used ones (in my case ~2.5KB, most of it from `normalize.css`)
 * Official [TailwindCSS Custom Forms](https://tailwindcss-custom-forms.netlify.com/) plugin loaded
 * How to extend color palette
 * How to prefix your colors to not collide with default theme
@@ -54,6 +54,6 @@ This template is made to help start your project based on Webpack + TailwindCSS 
 
 3) Test `cacheGroups` current setting, deeper
 
-4) Use purgeCSS used in Tailwind config instead of postcss config
+~~4) Use purgeCSS used in Tailwind config instead of postcss config~~ - DONE
 
 ## Happy coding!

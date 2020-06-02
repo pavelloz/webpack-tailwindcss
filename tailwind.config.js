@@ -9,6 +9,11 @@ const systemColors = {
 };
 
 module.exports = {
+  purge: [
+    './src/**/*.html',
+    './src/**/*.liquid',
+    './src/js/**/*.js',
+  ],
   theme: {
     extend: {
       colors: {
