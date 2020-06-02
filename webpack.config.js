@@ -62,7 +62,7 @@ const config = {
     new MiniCssExtractPlugin({
       filename: 'css/[name].css'
     }),
-    new CopyPlugin({ patterns: [{ from: 'src/index.html', to: 'index.html' }] })
+    new CopyPlugin({ patterns: [{ from: 'src/index.html', to: '../views/pages/index.html' }] })
   ],
   mode: prod ? 'production' : 'development'
 };
