@@ -13,6 +13,9 @@ module.exports = {
     mode: 'all',
     content: ['./src/**/*.html', './src/**/*.liquid', './src/js/**/*.js'],
   },
+  future: {
+    removeDeprecatedGapUtilities: true
+  },
   theme: {
     extend: {
       colors: {
