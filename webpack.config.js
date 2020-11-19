@@ -1,6 +1,5 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 const prod = process.env.NODE_ENV === 'production';
@@ -20,43 +19,24 @@ const config = {
     writeToDisk: true,
     open: true
   },
-  bail: true,
-  stats: {
-    assetsSort: '!size',
-    builtAt: false,
-    children: false,
-    modules: false
-  },
   module: {
     rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader?cacheDirectory'
+        loader: "babel-loader",
+        options: {
+          cacheDirectory: true,
+        },
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader?url=false', 'postcss-loader']
-      }
-    ]
-  },
-  optimization: {
-    minimizer: [
-      new TerserPlugin({
-        parallel: true,
-        cache: true,
-        terserOptions: {
-          output: {
-            comments: false,
-          },
-        },
-        extractComments: false,
-      })
+        use: [
+          MiniCssExtractPlugin.loader,
+          { loader: "css-loader", options: { url: false } },
+          "postcss-loader",
+        ],
+      },
     ],
-    splitChunks: {
-      cacheGroups: {
-        vendors: false // Do not emit vendors~* files that are almost empty in this setup
-      }
-    }
   },
   plugins: [
     new MiniCssExtractPlugin({

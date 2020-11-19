@@ -15,7 +15,6 @@ This template is made to help start your project based on Webpack + TailwindCSS 
 
 ## webpack setup includes
 * ES6 -> ES5 transpilation using `babel` with `babel-preset-env`
-* JS minification using `terser-webpack-plugin`
 * CSS extration using `mini-css-extract-plugin`
 * 3 character chunkhash added to chunks, but not to entry files
 * Prefetched chunk as an example
@@ -52,7 +51,7 @@ This template is made to help start your project based on Webpack + TailwindCSS 
 
 ~~2) Use webpack-dev-server instead of browsersync because of point 1~~ - DONE
 
-3) Test `cacheGroups` current setting, deeper
+~~3) Test `cacheGroups` current setting, deeper~~ - DONE
 
 ~~4) Use purgeCSS used in Tailwind config instead of postcss config~~ - DONE
 
