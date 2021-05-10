@@ -1,7 +1,7 @@
 {
   "scripts": {
     "clean": "npx del-cli app/*",
-    "start": "webpack-dev-server",
+    "start": "webpack server",
     "build": "npm run clean && cross-env NODE_ENV=production npx webpack-cli",
     "build:dev": "npm run clean && cross-env NODE_ENV=development npx webpack-cli"
   },
