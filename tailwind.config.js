@@ -9,6 +9,7 @@ const systemColors = {
 };
 
 module.exports = {
+  mode: 'jit',
   purge: {
     mode: 'all',
     content: ['./src/**/*.html', './src/**/*.liquid', './src/js/**/*.js'],

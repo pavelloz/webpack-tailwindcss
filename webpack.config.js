@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const { ESBuildMinifyPlugin } = require('esbuild-loader');
 
 const prod = process.env.NODE_ENV === 'production';
 
@@ -23,10 +24,7 @@ const config = {
     rules: [
       {
         test: /\.js$/,
-        loader: "babel-loader",
-        options: {
-          cacheDirectory: true,
-        },
+        loader: 'esbuild-loader'
       },
       {
         test: /\.css$/,
@@ -37,6 +35,14 @@ const config = {
         ],
       },
     ],
+  },
+  optimization: {
+    minimize: prod,
+    minimizer: [
+      new ESBuildMinifyPlugin({
+        css: true
+      })
+    ]
   },
   plugins: [
     new MiniCssExtractPlugin({

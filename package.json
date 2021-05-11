@@ -13,19 +13,16 @@
     "@babel/preset-env": "^7.14.1",
     "@tailwindcss/custom-forms": "^0.2.1",
     "autoprefixer": "^10.2.5",
-    "babel-loader": "^8.2.2",
     "copy-webpack-plugin": "^8.1.1",
     "cross-env": "^7.0.3",
     "css-loader": "^5.2.4",
     "del-cli": "^3.0.1",
     "mini-css-extract-plugin": "^1.6.0",
     "postcss": "^8.2.15",
-    "postcss-csso": "^5.0.1",
     "postcss-fixes": "^2.0.1",
     "postcss-import": "^14.0.2",
     "postcss-loader": "^5.2.0",
     "tailwindcss": "^2.1.2",
-    "terser-webpack-plugin": "^5.1.1",
     "webpack": "^5.37.0",
     "webpack-cli": "^4.7.0",
     "webpack-dev-server": "^3.11.2"
@@ -35,5 +32,8 @@
   "version": "1.0.0",
   "description": "Webpack + TailwindCSS + PurgeCSS boilerplate",
   "author": "Paweł Kowalski <pavelloz@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "esbuild-loader": "^2.13.0"
+  }
 }
