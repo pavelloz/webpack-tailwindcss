@@ -22,8 +22,5 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Build development assets
-      run: npm run build:dev
-
     - name: Build production assets
       run: npm run build
