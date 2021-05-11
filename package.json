@@ -28,5 +28,5 @@
   "version": "1.0.0",
   "description": "Webpack + TailwindCSS + ESbuild",
   "author": "Paweł Kowalski <pavelloz@gmail.com>",
-  "license": "ISC",
+  "license": "ISC"
 }
