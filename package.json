@@ -15,7 +15,6 @@
     "postcss-fixes": "^2.0.1",
     "postcss-import": "^14.0.2",
     "postcss-loader": "^5.2.0",
-    "rimraf": "^2.7.1",
     "tailwindcss": "^2.1.2",
     "webpack": "^5.37.0",
     "webpack-cli": "^4.7.0",
