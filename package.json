@@ -6,17 +6,13 @@
     "build:dev": "npm run clean && cross-env NODE_ENV=development npx webpack-cli"
   },
   "devDependencies": {
-    "@babel/cli": "^7.13.16",
-    "@babel/core": "^7.14.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
-    "@babel/plugin-transform-object-assign": "^7.12.13",
-    "@babel/preset-env": "^7.14.1",
     "@tailwindcss/custom-forms": "^0.2.1",
     "autoprefixer": "^10.2.5",
     "copy-webpack-plugin": "^8.1.1",
     "cross-env": "^7.0.3",
     "css-loader": "^5.2.4",
     "del-cli": "^3.0.1",
+    "esbuild-loader": "^2.13.0",
     "mini-css-extract-plugin": "^1.6.0",
     "postcss": "^8.2.15",
     "postcss-fixes": "^2.0.1",
@@ -28,12 +24,9 @@
     "webpack-dev-server": "^3.11.2"
   },
   "browserslist": "> 1% or last 2 years",
-  "name": "webpack-tailwindcss-purgecss",
+  "name": "webpack-tailwindcss",
   "version": "1.0.0",
-  "description": "Webpack + TailwindCSS + PurgeCSS boilerplate",
+  "description": "Webpack + TailwindCSS + ESbuild",
   "author": "Paweł Kowalski <pavelloz@gmail.com>",
   "license": "ISC",
-  "dependencies": {
-    "esbuild-loader": "^2.13.0"
-  }
 }
