@@ -4,12 +4,12 @@ This template is made to help start your project based on Webpack + TailwindCSS 
 
 ## Usage
 
-1) To use this template, click "Use this template" green button in the top right. If you prefer git clone, use `git clone --depth 1` to not clone history :)
+1) To use this template, click "Use this template" green button in the top right.
 2) Install dependencies - `npm ci`
-3) Configure where your views are in [postcss.config.js](https://github.com/pavelloz/webpack-tailwindcss-purgecss/blob/master/postcss.config.js).
+3) Configure where your views are in [tailwind.config.js](https://github.com/pavelloz/webpack-tailwindcss-purgecss/blob/master/tailwind.config.js).
 
 ## npm tasks
-* `npm start` - runs `webpack-dev-server` on `http://localhost:8080` and reloads on changes in `src/`
+* `npm start` - runs `live-server` on `http://localhost:8080` and reloads on changes
 * `npm run build` - build assets in production mode, minified, unused CSS classes purged
 
 ## webpack setup includes
