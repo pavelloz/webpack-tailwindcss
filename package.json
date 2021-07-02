@@ -1,13 +1,14 @@
 {
   "scripts": {
-    "clean": "npx rimraf app/*",
-    "start": "webpack-cli serve",
+    "clean": "npx rimraf app/assets/*",
+    "watch": "npx webpack-cli -w",
+    "serve": "npx live-server app/ --port 8080 --host 0.0.0.0",
+    "start": "npm run clean && npx concurrently -k npm:watch npm:serve",
     "build": "npm run clean && npx cross-env NODE_ENV=production npx webpack-cli"
   },
   "devDependencies": {
     "@tailwindcss/custom-forms": "^0.2.1",
     "autoprefixer": "^10.2.6",
-    "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^5.2.6",
     "esbuild-loader": "^2.13.1",
     "mini-css-extract-plugin": "^2.0.0",
@@ -17,13 +18,12 @@
     "postcss-loader": "^6.1.1",
     "tailwindcss": "^2.2.4",
     "webpack": "^5.42.0",
-    "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^4.0.0-beta.3"
+    "webpack-cli": "^4.7.2"
   },
-  "browserslist": "> 1% or last 2 years",
+  "browserslist": "last 3 years",
   "name": "webpack-tailwindcss",
-  "version": "1.0.0",
-  "description": "Webpack + TailwindCSS + ESbuild",
+  "version": "1.1.0",
+  "description": "Webpack + TailwindCSS + ESBuild",
   "author": "Paweł Kowalski <pavelloz@gmail.com>",
   "license": "ISC"
 }

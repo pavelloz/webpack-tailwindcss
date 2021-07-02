@@ -5,16 +5,15 @@ This template is made to help start your project based on Webpack + TailwindCSS 
 ## Usage
 
 1) To use this template, click "Use this template" green button in the top right. If you prefer git clone, use `git clone --depth 1` to not clone history :)
-2) Install dependencies - `npm install`
+2) Install dependencies - `npm ci`
 3) Configure where your views are in [postcss.config.js](https://github.com/pavelloz/webpack-tailwindcss-purgecss/blob/master/postcss.config.js).
 
 ## npm tasks
 * `npm start` - runs `webpack-dev-server` on `http://localhost:8080` and reloads on changes in `src/`
 * `npm run build` - build assets in production mode, minified, unused CSS classes purged
-* `npm run build:dev` - build assets in development mode, unminified (full TailwindCSS)
 
 ## webpack setup includes
-* ES6 -> ES5 transpilation using `babel` with `babel-preset-env`
+* JS and CSS transpilation and minification done by ESBuild (FAST)
 * CSS extration using `mini-css-extract-plugin`
 * 3 character chunkhash added to chunks, but not to entry files
 * Prefetched chunk as an example
@@ -33,7 +32,6 @@ This template is made to help start your project based on Webpack + TailwindCSS 
 * How to prefix your colors to not collide with default theme
 * How to set a different font as first in font family declaration
 * `xxl` breakpoint for responsive purposes
-* `hover` variant to borderWidth (allows you to change border width on element hover using TailwindCSS)
 
 ## Notes
 * Images, fonts, etc. are not handled by webpack. I just put them into the dist directory in `fonts/`, `img/`.
@@ -45,14 +43,5 @@ This template is made to help start your project based on Webpack + TailwindCSS 
 * [TailwindCSS Cheat Sheet](https://nerdcave.com/tailwind-cheat-sheet) - with search. Hopefully will be updated to the latest TailwindCSS version soon
 * [VSCode IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - Custom config aware autocomplete for TailwindCSS
 * [Webpack dynamic imports](https://medium.com/front-end-weekly/webpack-and-dynamic-imports-doing-it-right-72549ff49234) - How and why do the dynamic imports. See [`js/app.js`](src/js/app.js) for example.
-
-## TODO
-~~1) Prepare sirv example with autoreload (update purgecss config)~~ - DONE
-
-~~2) Use webpack-dev-server instead of browsersync because of point 1~~ - DONE
-
-~~3) Test `cacheGroups` current setting, deeper~~ - DONE
-
-~~4) Use purgeCSS used in Tailwind config instead of postcss config~~ - DONE
 
 ## Happy coding!
