@@ -2,7 +2,7 @@
 
 This template is made to help start your project based on Webpack + TailwindCSS without too much complication while keeping best performance practices set up, so you dont have to worry about basics.
 
-It has some settings set up for you so you dont have to look them up in documentation, code splitting and built by ESBuild, which should be very fast. Local development with livereload is set up as well.
+Local development is aided by livereload.
 
 ## Usage
 
