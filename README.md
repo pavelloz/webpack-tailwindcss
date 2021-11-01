@@ -46,3 +46,9 @@ It has some settings set up for you so you dont have to look them up in document
 * [Webpack dynamic imports](https://medium.com/front-end-weekly/webpack-and-dynamic-imports-doing-it-right-72549ff49234) - How and why do the dynamic imports. See [`js/app.js`](src/js/app.js) for example.
 
 ## Happy coding!
+
+
+### TODO
+
+- [ ] Use TailwindCSS CLI to generate CSS (simpler Webpack config, less npm packages, better performance)
+- [ ] Simplify PostCSS config (TailwindCSS will include autoprefixer and minification)
