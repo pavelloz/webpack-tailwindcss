@@ -18,8 +18,9 @@ It has some settings set up for you so you dont have to look them up in document
 ## webpack setup includes
 * JS and CSS transpilation and minification done by ESBuild (FAST)
 * CSS extraction using `mini-css-extract-plugin`
-* Prefetched chunk as an example for you
-* Example of naming chunks
+* Example: Prefetched chunk, if you want to load faster critical parts of your build
+* Example: Asynchronously loaded chunks, to block page rendering when loading/parsing/executing
+* Example: Named chunks if you dont want your chunks to look like `2aae6c35c94fcfb415dbe95f408b9ce91ee846ed.js`
 
 ## PostCSS setup includes
 * [autoprefixer](https://github.com/postcss/autoprefixer) - Adding vendor prefixes, just in case. See package.json for `browserslist` config
@@ -35,8 +36,8 @@ It has some settings set up for you so you dont have to look them up in document
 * `xxl` breakpoint for responsive purposes
 
 ## Notes
-* Images, fonts, etc. are not handled by webpack. I just put them into the dist directory in `fonts/`, `img/`.
-* Before you build using `npm run build` task, everything in `app/assets/js` and `app/assets/css` is removed
+* Images, fonts, etc. are not handled by webpack. I put them into the dist directory in `fonts/`, `img/`.
+* Before you build using `npm run build` task, everything in `app/assets/js` and `app/assets/css` is removed, to start with a clean slate and never deploy out-of-date assets
 
 ## Additional resources
 
