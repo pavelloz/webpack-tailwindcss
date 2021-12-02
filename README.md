@@ -24,7 +24,6 @@ Local development is aided by livereload.
 
 ## PostCSS setup includes
 * [autoprefixer](https://github.com/postcss/autoprefixer) - Adding vendor prefixes, just in case. See package.json for `browserslist` config
-* [postcss-csso](https://github.com/lahmatiy/postcss-csso) - Minifying your css for you
 * [postcss-import](https://github.com/postcss/postcss-import) - Support for @imports - just like in SASS
 * [postcss-fixes](https://github.com/MattDiMu/postcss-fixes) - Various fixes improving your CSS cross-browser compatibility
 
