@@ -42,7 +42,8 @@ const config = {
       filename: 'css/[name].css'
     }),
   ],
-  mode: prod ? 'production' : 'development'
+  mode: prod ? 'production' : 'development',
+  stats: prod ? 'normal' : 'minimal'
 };
 
 module.exports = config;
