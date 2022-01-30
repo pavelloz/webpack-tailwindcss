@@ -1,3 +1,5 @@
+30 January 2022 - Add index.html to make testing easier. Update tailwind config file to 3.x format. Upgrade all npm dependencies.
+
 15 December 2021 - Updated to [TailwindCSS 3.0.2](https://github.com/tailwindcss/tailwindcss/releases/tag/v3.0.0)
 
 7 February 2020 - Updated [TailwindCSS to 1.2.0](https://github.com/tailwindcss/tailwindcss/releases/tag/v1.2.0)
