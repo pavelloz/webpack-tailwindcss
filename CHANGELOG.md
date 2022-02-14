@@ -1,5 +1,10 @@
-14 February 2022 - Migrated from `@tailwindcss/custom-forms` to official `@tailwindcss/forms`.
+14 February 2022
+Migrated from `@tailwindcss/custom-forms` to official `@tailwindcss/forms`.
+Included full @tailwindcss/forms demo page as index.html for better debugging and showcase.
 Fixed missing index.html in git.
+Migrated to `html-webpack-plugin` to have more options.
+Migrated from livereload to `webpack-dev-server` for speed and convenience.
+Removed postcss-fixes.
 
 30 January 2022 - Add index.html to make testing easier. Update tailwind config file to 3.x format. Upgrade all npm dependencies.
 

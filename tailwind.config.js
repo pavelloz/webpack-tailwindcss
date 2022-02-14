@@ -10,7 +10,7 @@ const systemColors = {
 
 module.exports = {
   mode: 'jit',
-  content: ['./app/**/*.html', './src/js/**/*.js'],
+  content: ['./src/**/*.{html,js}'],
   theme: {
     extend: {
       colors: {
