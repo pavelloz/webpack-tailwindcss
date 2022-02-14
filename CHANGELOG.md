@@ -1,3 +1,6 @@
+14 February 2022 - Migrated from `@tailwindcss/custom-forms` to official `@tailwindcss/forms`.
+Fixed missing index.html in git.
+
 30 January 2022 - Add index.html to make testing easier. Update tailwind config file to 3.x format. Upgrade all npm dependencies.
 
 15 December 2021 - Updated to [TailwindCSS 3.0.2](https://github.com/tailwindcss/tailwindcss/releases/tag/v3.0.0)

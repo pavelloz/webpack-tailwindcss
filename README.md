@@ -52,3 +52,4 @@ Local development is aided by livereload.
 
 - [ ] Use TailwindCSS CLI to generate CSS (simpler Webpack config, less npm packages, better performance)
 - [ ] Simplify PostCSS config (TailwindCSS will include autoprefixer and minification)
+- [ ] Think about migrating index.html to use htmlwebpack plugin.
