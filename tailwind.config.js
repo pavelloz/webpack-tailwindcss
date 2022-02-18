@@ -9,17 +9,12 @@ const systemColors = {
 };
 
 module.exports = {
-  mode: 'jit',
   content: ['./src/**/*.{html,js}'],
   theme: {
     extend: {
       colors: {
-        // `ex` prefix will create classes like `text-ex-red`
-        // Remove `ex` if you dont want prefix
-        ex: {
-          ...brandColors,
-          ...systemColors,
-        },
+        ...brandColors,
+        ...systemColors,
       },
       fontFamily: {
         sans: ['Lato', ...defaultTheme.fontFamily.sans],
