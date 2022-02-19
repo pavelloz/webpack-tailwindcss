@@ -27,8 +27,7 @@ This template is made to help start your project based on Webpack + TailwindCSS 
 
 ## TailwindCSS setup includes
 * Official [TailwindCSS forms](https://tailwindcss.com/docs/plugins#forms) plugin loaded
-* How to extend color palette
-* How to prefix your colors to not collide with default theme
+* How to extend default color palette
 * How to set a different font as first in font family declaration
 * `xxl` breakpoint for responsive purposes
 
