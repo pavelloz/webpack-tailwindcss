@@ -1,6 +1,6 @@
 # webpack-tailwindcss
 
-This template is made to help start your project based on Webpack + TailwindCSS without too much complication while keeping best performance practices set up, so you dont have to worry about basics.
+This template is made to help start your project based on Webpack + TailwindCSS. Setup is pretty simple, while keeping best performance practices set up.
 
 ## Usage
 
@@ -9,9 +9,9 @@ This template is made to help start your project based on Webpack + TailwindCSS 
 3) Install dependencies - `npm ci`
 4) Configure where your views are in [tailwind.config.js](https://github.com/pavelloz/webpack-tailwindcss-purgecss/blob/master/tailwind.config.js).
 
-## npm tasks
-* `npm start` - runs `webpack-dev-server` on `http://localhost:8080` and reloads the browser on changes
-* `npm run build` - build assets in production mode
+### npm tasks
+* `npm start` - runs dev server on `http://localhost:8080` and reloads the browser on changes
+* `npm run build` - build assets in production mode, ready to deploy
 
 ## webpack setup includes
 * JS and CSS transpilation and minification done by ESBuild (FAST)
