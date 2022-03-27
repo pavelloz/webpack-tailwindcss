@@ -1,3 +1,8 @@
+## 28 March 2022
+* Change build directory from `app` to `dist`
+* Do not minify css in `dev` mode
+* Do not compile js/css from `node_modules` directory
+
 ## 18 February 2022
 * Remove `mode: 'jit'` setting
 * Remove prefix from classes, so it is now default - less friction when using

@@ -2,8 +2,8 @@
 node_modules/
 .env
 
-# Webpack generated assets
-app/
+# Dist directory generated assets
+build/
 
 # OS junk
 .DS_Store

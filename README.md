@@ -13,13 +13,14 @@ This template is made to help start your project based on Webpack + TailwindCSS.
 * `npm start` - runs dev server on `http://localhost:8080` and reloads the browser on changes
 * `npm run build` - build assets in production mode, ready to deploy
 
-## webpack setup includes
+## Webpack setup includes
 * JS and CSS transpilation and minification done by ESBuild (FAST)
 * CSS extraction using `mini-css-extract-plugin`
 * HTML generation using `html-webpack-plugin`
-* Example: Prefetched chunk, if you want to load faster critical parts of your build
-* Example: Asynchronously loaded chunks, to block page rendering when loading/parsing/executing
-* Example: Named chunks if you dont want your chunks to look like `2aae6c35c94fcfb415dbe95f408b9ce91ee846ed.js`
+* Example of:
+  * Prefetched chunk, if you want to load faster critical parts of your build
+  * Asynchronously loaded chunks, to block page rendering when loading/parsing/executing
+  * Named chunks if you dont want your chunks to look like `2aae6c35c94fcfb415dbe95f408b9ce91ee846ed.js`
 
 ## PostCSS setup includes
 * [autoprefixer](https://github.com/postcss/autoprefixer) - Adding vendor prefixes, just in case. See package.json for `browserslist` config
@@ -43,3 +44,8 @@ This template is made to help start your project based on Webpack + TailwindCSS.
 * [Webpack dynamic imports](https://medium.com/front-end-weekly/webpack-and-dynamic-imports-doing-it-right-72549ff49234) - How and why do the dynamic imports. See [`js/app.js`](src/js/app.js) for example.
 
 ## Happy coding!
+
+
+
+#### TODO
+* Move images/fonts out from build directory to `src/static` and use CopyPlugin to copy them

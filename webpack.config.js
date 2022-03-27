@@ -10,7 +10,7 @@ const config = {
     app: './src/js/app'
   },
   output: {
-    path: path.resolve('app'),
+    path: path.resolve('dist'),
     filename: 'js/[name].js',
     chunkFilename: 'js/[name].[chunkhash:3].js'
   },
@@ -18,10 +18,12 @@ const config = {
     rules: [
       {
         test: /\.js$/,
+        exclude: /node_modules/,
         loader: 'esbuild-loader'
       },
       {
         test: /\.css$/,
+        exclude: /node_modules/,
         use: [
           MiniCssExtractPlugin.loader,
           { loader: "css-loader", options: { url: false } },
@@ -32,7 +34,7 @@ const config = {
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, 'app'),
+      directory: path.join(__dirname, 'build'),
     },
     watchFiles: ['src/*'],
     compress: true,
@@ -45,7 +47,7 @@ const config = {
     minimize: prod,
     minimizer: [
       new ESBuildMinifyPlugin({
-        css: true
+        css: prod
       })
     ]
   },
