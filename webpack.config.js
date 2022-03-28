@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { ESBuildMinifyPlugin } = require('esbuild-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyPlugin = require("copy-webpack-plugin");
 
 const prod = process.env.NODE_ENV === 'production';
 
@@ -57,7 +58,12 @@ const config = {
     }),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
-    })
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "src/static", to: "static" },
+      ],
+    }),
   ],
   mode: prod ? 'production' : 'development',
   stats: prod ? 'normal' : 'minimal'

@@ -3,7 +3,7 @@ node_modules/
 .env
 
 # Dist directory generated assets
-build/
+dist/
 
 # OS junk
 .DS_Store

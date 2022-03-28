@@ -33,8 +33,7 @@ This template is made to help start your project based on Webpack + TailwindCSS.
 * `xxl` breakpoint for responsive purposes
 
 ## Notes
-* Images, fonts, etc. are not handled by webpack. I put them into the dist directory in `fonts/`, `img/`.
-* Before you build using `npm run build` task, everything in `app/assets/js` and `app/assets/css` is removed, to start with a clean slate and never deploy out-of-date assets
+* Before every build, build directory is deleted to avoid deploying old assets
 
 ## Additional resources
 
@@ -44,8 +43,3 @@ This template is made to help start your project based on Webpack + TailwindCSS.
 * [Webpack dynamic imports](https://medium.com/front-end-weekly/webpack-and-dynamic-imports-doing-it-right-72549ff49234) - How and why do the dynamic imports. See [`js/app.js`](src/js/app.js) for example.
 
 ## Happy coding!
-
-
-
-#### TODO
-* Move images/fonts out from build directory to `src/static` and use CopyPlugin to copy them

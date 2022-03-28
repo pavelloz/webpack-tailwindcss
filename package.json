@@ -1,13 +1,14 @@
 {
   "scripts": {
     "start": "npx webpack-dev-server",
-    "clean": "npx rimraf app/*",
+    "clean": "npx rimraf dist/",
     "build": "npm run clean && npx cross-env NODE_ENV=production npx webpack-cli",
     "build:dev": "npm run clean && npx cross-env NODE_ENV=development npx webpack-cli"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.0",
     "autoprefixer": "^10.4.4",
+    "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.7.1",
     "esbuild-loader": "^2.18.0",
     "html-webpack-plugin": "^5.5.0",
