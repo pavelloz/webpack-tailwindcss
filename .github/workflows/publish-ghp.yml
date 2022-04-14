@@ -1,0 +1,32 @@
+name: Publish Github Pages
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  publish-gh-pages:
+    permissions:
+      contents: write
+    # The second argument to startsWith() must match the release-branch-prefix
+    # input to this Action. Here, we use the default, "release/".
+    if: |
+      github.event.pull_request.merged == true &&
+      startsWith(github.event.pull_request.head.ref, 'release/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - uses: MetaMask/action-publish-gh-pages@v2
+        with:
+          source-directory: dist
+          # This will commit the contents of "public" in the source branch to
+          # a directory named "latest" on the gh-pages branch.
+          # If destination-directory were omitted, all existing content of the
+          # gh-pages branch would be deleted and the the contents of "public"
+          # would be committed to the root directory.
+          destination-directory: latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

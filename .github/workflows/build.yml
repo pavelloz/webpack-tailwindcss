@@ -13,9 +13,10 @@ jobs:
         node: [14, 16]
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node }} @ ${{ matrix.os }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v3
+      cache: 'npm'
       with:
         node-version: ${{ matrix.node }}
 
@@ -27,5 +28,9 @@ jobs:
     - name: Build production assets
       run: npm run build
 
-    - name: Publish github pages
-      run: mv dist docs
+    - name: Publish generated content to GitHub Pages
+      uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
+      with:
+        dir: dist
+        branch: gh-pages
+        token: ${{ secrets.ACCESS_TOKEN }}
