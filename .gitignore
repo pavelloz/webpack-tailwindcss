@@ -4,6 +4,7 @@ node_modules/
 
 # Dist directory generated assets
 dist/
+docs/
 
 # OS junk
 .DS_Store
