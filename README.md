@@ -43,3 +43,7 @@ This template is made to help start your project based on Webpack + TailwindCSS.
 * [Webpack dynamic imports](https://medium.com/front-end-weekly/webpack-and-dynamic-imports-doing-it-right-72549ff49234) - How and why do the dynamic imports. See [`js/app.js`](src/js/app.js) for example.
 
 ## Happy coding!
+
+## TODO
+
+* Investigate `webpack-dev-server` npm audit issues
