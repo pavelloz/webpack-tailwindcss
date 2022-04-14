@@ -47,3 +47,5 @@ This template is made to help start your project based on Webpack + TailwindCSS.
 ## TODO
 
 * Investigate `webpack-dev-server` npm audit issues
+* Create github pages preview
+* Write simple codeceptjs test run on the example, after the deployment
