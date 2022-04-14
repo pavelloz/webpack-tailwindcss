@@ -26,3 +26,6 @@ jobs:
 
     - name: Build production assets
       run: npm run build
+
+    - name: Publish github pages
+      run: mv -r dist docs
