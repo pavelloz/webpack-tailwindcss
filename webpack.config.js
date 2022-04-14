@@ -3,8 +3,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { ESBuildMinifyPlugin } = require('esbuild-loader');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require("copy-webpack-plugin");
+const HTMLInlineCSSWebpackPlugin = require("html-inline-css-webpack-plugin").default;
 
-const prod = process.env.NODE_ENV === 'production';
+const production = process.env.NODE_ENV === 'production';
 
 const config = {
   entry: {
@@ -44,14 +45,6 @@ const config = {
   watchOptions: {
     aggregateTimeout: 200
   },
-  optimization: {
-    minimize: prod,
-    minimizer: [
-      new ESBuildMinifyPlugin({
-        css: prod
-      })
-    ]
-  },
   plugins: [
     new MiniCssExtractPlugin({
       filename: 'css/[name].css'
@@ -65,8 +58,21 @@ const config = {
       ],
     }),
   ],
-  mode: prod ? 'production' : 'development',
-  stats: prod ? 'normal' : 'minimal'
+  mode: production ? 'production' : 'development',
+  stats: production ? 'normal' : 'minimal'
 };
+
+if (production) {
+  config.optimization = {
+    minimize: true,
+    minimizer: [
+      new ESBuildMinifyPlugin({
+        css: true
+      })
+    ]
+  }
+
+  config.plugins.push(new HTMLInlineCSSWebpackPlugin());
+}
 
 module.exports = config;
