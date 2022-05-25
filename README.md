@@ -1,6 +1,7 @@
 # webpack-tailwindcss
 
-This template is made to help start your project based on Webpack + TailwindCSS. Setup is pretty simple, while keeping best performance practices set up.
+This template is made to help start your project based on Webpack + TailwindCSS.
+JS is built and minified by ESBuild to keep it fast no matter what you do.
 
 Build preview: https://pavelloz.github.io/webpack-tailwindcss/
 
@@ -19,7 +20,7 @@ Build preview: https://pavelloz.github.io/webpack-tailwindcss/
 * JS and CSS transpilation and minification done by ESBuild (FAST)
 * CSS extraction using `mini-css-extract-plugin`
 * HTML generation using `html-webpack-plugin`
-* Example of:
+* Examples:
   * Prefetched chunk, if you want to load faster critical parts of your build
   * Asynchronously loaded chunks, to block page rendering when loading/parsing/executing
   * Named chunks if you dont want your chunks to look like `2aae6c35c94fcfb415dbe95f408b9ce91ee846ed.js`
@@ -30,12 +31,14 @@ Build preview: https://pavelloz.github.io/webpack-tailwindcss/
 
 ## TailwindCSS setup includes
 * Official [TailwindCSS forms](https://tailwindcss.com/docs/plugins#forms) plugin loaded
-* How to extend default color palette
-* How to set a different font as first in font family declaration
-* `xxl` breakpoint for responsive purposes
+* Examples:
+  * Extending default color palette
+  * Setting custom font as first in font family declaration
+  * Custom (`xxl`) breakpoint for responsive purposes
+  * Custom variant for border width property
 
 ## Notes
-* Before every build, build directory is deleted to avoid deploying old assets
+* Before every build, build directory (`dist`) is deleted to avoid deploying old assets
 
 ## Additional resources
 
