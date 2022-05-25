@@ -1,31 +1,24 @@
-name: Build
+name: Publish to gh-pages
 
-on: [push]
+on:
+  repository_dispatch:
+  push:
+    branches:
+      - master
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v2
     - name: Use Node.js
-      uses: actions/setup-node@v3
-      cache: 'npm'
+      uses: actions/setup-node@v1
       with:
-        node-version: 16
-
-    - name: Install dependencies
-      run: |
-        npm ci
-        npm i -g rimraf
-
-    - name: Build production assets
-      run: npm run build
-
-    - name: Publish generated content to GitHub Pages
-      uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
+        node-version: '16.x'
+    - run: npm ci
+    - run: npm run build
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        dir: dist
-        branch: gh-pages
-        token: ${{ secrets.ACCESS_TOKEN }}
+        github_token: ${{ secrets.ACCESS_TOKEN }}
+        publish_dir: ./dist
