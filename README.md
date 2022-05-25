@@ -2,6 +2,8 @@
 
 This template is made to help start your project based on Webpack + TailwindCSS. Setup is pretty simple, while keeping best performance practices set up.
 
+Build preview: https://pavelloz.github.io/webpack-tailwindcss/
+
 ## Usage
 
 1) To use this template, click "Use this template" green button in the top right.
@@ -46,5 +48,4 @@ This template is made to help start your project based on Webpack + TailwindCSS.
 
 ## TODO
 
-* Create github pages preview
 * Write simple codeceptjs test run on the example, after the deployment
