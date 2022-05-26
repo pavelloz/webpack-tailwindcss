@@ -1,3 +1,8 @@
+## 26 May 2022
+* Added preview on github pages
+* Updates readme to describe TailwindCSS examples in the config
+* Upgraded npm dependencies
+
 ## 14 April 2022
 * Add CSS inlining into html file using webpack plugin - only in production mode
 * Small refactor of webpack config
