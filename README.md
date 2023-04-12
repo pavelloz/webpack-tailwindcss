@@ -51,4 +51,6 @@ Build preview: https://pavelloz.github.io/webpack-tailwindcss/
 
 ## TODO
 
-* Write simple codeceptjs test run on the example, after the deployment
+* Write simple cypress test run on the example, after the deployment
+* Migrate to pnpm
+* Split webpack configs into common + dev/prod to avoid pushing to plugins array 
