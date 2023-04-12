@@ -3,7 +3,7 @@
 This template is made to help start your project based on Webpack + TailwindCSS.
 JS is built and minified by ESBuild to keep it fast no matter what you do.
 
-Build preview: https://pavelloz.github.io/webpack-tailwindcss/
+Build preview is available at: https://pavelloz.github.io/webpack-tailwindcss/
 
 ## Usage
 
@@ -47,10 +47,19 @@ Build preview: https://pavelloz.github.io/webpack-tailwindcss/
 * [VSCode IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - Custom config aware autocomplete for TailwindCSS
 * [Webpack dynamic imports](https://medium.com/front-end-weekly/webpack-and-dynamic-imports-doing-it-right-72549ff49234) - How and why do the dynamic imports. See [`js/app.js`](src/js/app.js) for example.
 
+## Github Actions
+
+TODO
+
+## E2E tests
+
+TODO
+
 ## Happy coding!
 
 ## TODO
 
-* Write simple cypress test run on the example, after the deployment
 * Migrate to pnpm
+* Add node_modules caching in GHA to speed up builds
+* Write simple cypress test run on the example, after the deployment
 * Split webpack configs into common + dev/prod to avoid pushing to plugins array 
