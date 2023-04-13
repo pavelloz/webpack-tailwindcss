@@ -37,7 +37,7 @@ const config = {
     },
     watchFiles: ['src/*'],
     compress: true,
-    port: 8080,
+    port: 8888,
   },
   watchOptions: {
     aggregateTimeout: 200,

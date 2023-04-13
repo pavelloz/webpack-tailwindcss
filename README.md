@@ -13,7 +13,7 @@ Build preview is available at: https://pavelloz.github.io/webpack-tailwindcss/
 4) Configure where your views are in [tailwind.config.js](https://github.com/pavelloz/webpack-tailwindcss-purgecss/blob/master/tailwind.config.js).
 
 ### npm tasks
-* `npm start` - runs dev server on `http://localhost:8080` and reloads the browser on changes
+* `npm start` - runs dev server on `http://localhost:8888` and reloads the browser on changes
 * `npm run build` - build assets in production mode, ready to deploy
 
 ## Webpack setup includes
