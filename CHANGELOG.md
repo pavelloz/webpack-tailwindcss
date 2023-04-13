@@ -1,3 +1,10 @@
+## 12 April 2023
+* Upgraded npm dependencies
+* Updated kitchen sink
+* [CI] Upgraded Github Actions
+* [CI] Added Node 18 to the CI build
+* [CI] Made github pages publish only on successful builds
+
 ## 26 May 2022
 * Added preview on github pages
 * Updates readme to describe TailwindCSS examples in the config
