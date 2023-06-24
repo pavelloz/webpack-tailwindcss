@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebpack_tailwindcss=self.webpackChunkwebpack_tailwindcss||[]).push([[346],{64:(c,e,l)=>{l.r(e);const s=()=>{console.log("Hello from async loaded module")};e.default=s}}]);
