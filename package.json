@@ -24,7 +24,7 @@
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
   },
-  "browserslist": "last 3 years",
+  "browserslist": "last 1 year and >1%",
   "name": "webpack-tailwindcss",
   "version": "1.2.0",
   "description": "Webpack + TailwindCSS + esbuild",
