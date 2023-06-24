@@ -1,3 +1,11 @@
+## 24 June 2023
+* [BREAKING] Removed support for node 14
+* [BREAKING] Migrated to pnpm
+* [BREAKING] Installed missing optional dependencies (rimraf, cross-env), and changed npm tasks to use them directly instead of npx/pnpx
+* [BREAKING] Changed very conservative browserslist string from `last 3 years` to `last 2 versions and >1%`. It will generate more modern build, hopefully smaller and faster. To verify if it satisfies your requirements run `pnpx browserslist "last 2 versions and >1%"` in your terminal and check if browsers you support are there.
+* [CI] Sped up Github Actions by caching node_modules
+* Upgraded npm dependencies
+
 ## 12 April 2023
 * Upgraded npm dependencies
 * Updated kitchen sink
