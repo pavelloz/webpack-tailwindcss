@@ -1,20 +1,13 @@
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { EsbuildPlugin } = require('esbuild-loader');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
-const HTMLInlineCSSWebpackPlugin = require('html-inline-css-webpack-plugin').default;
+const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
 
 const production = process.env.NODE_ENV === 'production';
 
 const config = {
-  entry: {
-    app: './src/js/app',
-  },
   output: {
     path: path.resolve('dist'),
-    filename: 'js/[name].js',
-    chunkFilename: 'js/[name].[chunkhash:3].js',
+    clean: true, // clean the 'dist' directory before build
   },
   module: {
     rules: [
@@ -27,15 +20,27 @@ const config = {
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        use: [MiniCssExtractPlugin.loader, { loader: 'css-loader', options: { url: false } }, 'postcss-loader'],
+        use: [{ loader: 'css-loader', options: { url: false } }, 'postcss-loader'],
+      },
+      {
+        test: /\.(ico|png|jp?g|svg)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'img/[name].[hash:8][ext]',
+        },
       },
     ],
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, 'build'),
+      directory: path.join(__dirname, 'dist'), // must be the same as output.path
     },
-    watchFiles: ['src/*'],
+    watchFiles: {
+      paths: ['src/**/*.*'],
+      options: {
+        usePolling: true,
+      },
+    },
     compress: true,
     port: 8888,
   },
@@ -43,14 +48,21 @@ const config = {
     aggregateTimeout: 200,
   },
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: 'css/[name].css',
-    }),
-    new HtmlWebpackPlugin({
-      template: 'src/index.html',
-    }),
-    new CopyPlugin({
-      patterns: [{ from: 'src/static', to: 'static' }],
+    new HtmlBundlerPlugin({
+      entry: {
+        // define templates here
+        index: 'src/index.html', // => dist/index.html (key is output filename w/o '.html')
+      },
+      js: {
+        // output filename of JS extracted from source script specified in `<script>`
+        filename: 'js/[name].[contenthash:8].js',
+        inline: production, // inline JS for production mode, extract JS file for development mode
+      },
+      css: {
+        // output filename of CSS extracted from source file specified in `<link>`
+        filename: 'css/[name].[contenthash:8].css',
+        inline: production, // inline CSS for production mode, extract CSS file for development mode
+      },
     }),
   ],
   mode: production ? 'production' : 'development',
@@ -63,12 +75,10 @@ if (production) {
     minimizer: [
       new EsbuildPlugin({
         target: 'es2015',
-        css: true,
+        //css: true, // Note: minify CSS via the postcss-minify plugin
       }),
     ],
   };
-
-  config.plugins.push(new HTMLInlineCSSWebpackPlugin());
 }
 
 module.exports = config;
