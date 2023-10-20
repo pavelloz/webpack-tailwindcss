@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkwebpack_tailwindcss=globalThis.webpackChunkwebpack_tailwindcss||[]).push([[516],{442:(s,l,e)=>{e.r(l),e.d(l,{default:()=>o});const o=()=>{console.log("Hello from defered module!")}}}]);

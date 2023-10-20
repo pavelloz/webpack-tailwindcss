@@ -1,1 +1,0 @@
-"use strict";(globalThis.webpackChunkwebpack_tailwindcss=globalThis.webpackChunkwebpack_tailwindcss||[]).push([[346],{64:(d,l,o)=>{o.r(l),o.d(l,{default:()=>s});const s=()=>{console.log("Hello from async loaded module")}}}]);
