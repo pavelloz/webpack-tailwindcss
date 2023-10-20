@@ -37,9 +37,6 @@ const config = {
     },
     watchFiles: {
       paths: ['src/**/*.*'],
-      options: {
-        usePolling: true,
-      },
     },
     compress: true,
     port: 8888,
@@ -55,12 +52,12 @@ const config = {
       },
       js: {
         // output filename of JS extracted from source script specified in `<script>`
-        filename: 'js/[name].[contenthash:8].js',
+        filename: 'js/[name].[contenthash:4].js',
         inline: production, // inline JS for production mode, extract JS file for development mode
       },
       css: {
         // output filename of CSS extracted from source file specified in `<link>`
-        filename: 'css/[name].[contenthash:8].css',
+        filename: 'css/[name].[contenthash:4].css',
         inline: production, // inline CSS for production mode, extract CSS file for development mode
       },
     }),
@@ -71,11 +68,11 @@ const config = {
 
 if (production) {
   config.optimization = {
-    minimize: true,
+    minimize: production,
     minimizer: [
       new EsbuildPlugin({
         target: 'es2015',
-        //css: true, // Note: minify CSS via the postcss-minify plugin
+        css: true,
       }),
     ],
   };

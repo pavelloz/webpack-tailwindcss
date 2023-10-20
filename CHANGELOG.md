@@ -1,3 +1,9 @@
+## 20 Oct 2023
+* [BREAKING] Migrated from `html-webpack-plugin` and its plugins to `html-bundler-webpack-plugin` - Credits: @webdiscus
+    * CSS is now inlined in production mode. Configurable in webpack.config.js
+    * Main JS is now inlined in production mode. To load asynchronously make sure to use dynamic import.
+* Added second dynamic chunk example - without prefetching
+
 ## 24 June 2023
 * [BREAKING] Removed support for node 14
 * [BREAKING] Migrated to pnpm
