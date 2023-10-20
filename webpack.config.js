@@ -26,7 +26,7 @@ const config = {
         test: /\.(ico|png|jp?g|svg)$/,
         type: 'asset/resource',
         generator: {
-          filename: 'img/[name].[hash:8][ext]',
+          filename: 'images/[name].[hash:4][ext]',
         },
       },
     ],
