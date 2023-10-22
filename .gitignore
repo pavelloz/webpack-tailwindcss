@@ -8,3 +8,6 @@ docs/
 
 # OS junk
 .DS_Store
+
+# VSCode junk
+.vscode

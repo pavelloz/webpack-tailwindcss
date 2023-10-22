@@ -1,3 +1,6 @@
+## 22 Oct 2023
+* Add HTML minification in production mode
+
 ## 20 Oct 2023
 * [BREAKING] Migrated from `html-webpack-plugin` and its plugins to `html-bundler-webpack-plugin` - Credits: @webdiscus
     * CSS is now inlined in production mode. Configurable in webpack.config.js

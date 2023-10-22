@@ -46,20 +46,19 @@ const config = {
   },
   plugins: [
     new HtmlBundlerPlugin({
+      // Documentation: https://github.com/webdiscus/html-bundler-webpack-plugin
       entry: {
-        // define templates here
         index: 'src/index.html', // => dist/index.html (key is output filename w/o '.html')
       },
       js: {
-        // output filename of JS extracted from source script specified in `<script>`
         filename: 'js/[name].[contenthash:4].js',
         inline: production, // inline JS for production mode, extract JS file for development mode
       },
       css: {
-        // output filename of CSS extracted from source file specified in `<link>`
         filename: 'css/[name].[contenthash:4].css',
         inline: production, // inline CSS for production mode, extract CSS file for development mode
       },
+      minify: 'auto',
     }),
   ],
   mode: production ? 'production' : 'development',
