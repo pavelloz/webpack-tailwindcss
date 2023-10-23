@@ -1,3 +1,8 @@
+## 23 Oct 2023
+* Fix async chunk names
+* Remove unnecessary dependencies
+* Cleanup npm tasks
+
 ## 22 Oct 2023
 * Add HTML minification in production mode
 
