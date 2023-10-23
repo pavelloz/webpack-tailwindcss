@@ -7,6 +7,7 @@ const production = process.env.NODE_ENV === 'production';
 const config = {
   output: {
     path: path.resolve('dist'),
+    chunkFilename: '[name].[chunkhash:4].js',
     clean: true, // clean the 'dist' directory before build
   },
   module: {
