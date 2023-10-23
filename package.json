@@ -1,10 +1,8 @@
 {
   "scripts": {
     "start": "webpack-dev-server",
-    "clean": "rimraf dist/",
-    "build": "pnpm clean && cross-env NODE_ENV=production webpack-cli",
-    "build:dev": "pnpm clean && cross-env NODE_ENV=development webpack-cli",
-    "build:prod": "cross-env NODE_ENV=production webpack"
+    "build": "cross-env NODE_ENV=production webpack",
+    "build:dev": "cross-env NODE_ENV=development webpack-cli"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.6",
@@ -16,7 +14,6 @@
     "postcss": "^8.4.31",
     "postcss-import": "^15.1.0",
     "postcss-loader": "^7.3.3",
-    "rimraf": "^5.0.5",
     "tailwindcss": "^3.3.3",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4",
