@@ -5,6 +5,12 @@ JS is built and minified by ESBuild to keep it fast no matter what you do.
 
 Build preview is available at: https://pavelloz.github.io/webpack-tailwindcss/
 
+## Quickest start
+
+Having this boilerplate ready to run on your machine is as easy as typing:
+
+    npx degit pavelloz/webpack-tailwindcss new-project
+
 ## Usage
 
 1. To use this template, click "Use this template" green button in the top right.
