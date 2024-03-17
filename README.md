@@ -64,7 +64,6 @@ TODO
 
 ## TODO
 
-- Migrate to pnpm
 - Add node_modules caching in GHA to speed up builds
-- Write simple cypress test run on the example, after the deployment
+- Write simple e2e test run on the example, after the deployment
 - Split webpack configs into common + dev/prod to avoid pushing to plugins array

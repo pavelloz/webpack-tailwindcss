@@ -1,3 +1,6 @@
+## 17 March 2024
+- Improved examples
+
 ## 12 January 2024
 
 - Update Readme to reflect pnpm migration
