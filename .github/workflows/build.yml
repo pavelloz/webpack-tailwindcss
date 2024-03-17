@@ -9,13 +9,12 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        node: [18, 20, 21]
+        node: [20, 21]
 
     steps:
       - uses: actions/checkout@v4
       - uses: wyvox/action-setup-pnpm@v3
         with:
-          node-version: ${{ matrix.node }}
           pnpm-version: 8.15.4
 
       # - uses: pnpm/action-setup@v3
