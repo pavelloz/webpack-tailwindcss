@@ -52,10 +52,6 @@ Build preview is available at: https://pavelloz.github.io/webpack-tailwindcss/
 - [VSCode IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss) - Custom config aware autocomplete for TailwindCSS
 - [Webpack dynamic imports](https://medium.com/front-end-weekly/webpack-and-dynamic-imports-doing-it-right-72549ff49234) - How and why do the dynamic imports. See [`js/app.js`](src/js/app.js) for example.
 
-## Github Actions
-
-TODO
-
 ## E2E tests
 
 TODO
@@ -64,6 +60,5 @@ TODO
 
 ## TODO
 
-- Add node_modules caching in GHA to speed up builds
 - Write simple e2e test run on the example, after the deployment
 - Split webpack configs into common + dev/prod to avoid pushing to plugins array

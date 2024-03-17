@@ -1,5 +1,7 @@
 ## 17 March 2024
+
 - Improved examples
+- Sped up CI, added node 21, dropped node 18 from builds
 
 ## 12 January 2024
 
