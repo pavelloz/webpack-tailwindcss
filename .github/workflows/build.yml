@@ -18,20 +18,8 @@ jobs:
           node-version: ${{ matrix.node }}
           pnpm-version: 8.15.4
 
-      # - uses: pnpm/action-setup@v3
-      #   with:
-      #     version: 8
-      # - name: Use Node.js ${{ matrix.node }} @ ${{ matrix.os }}
-      #   uses: actions/setup-node@v4
-      #   with:
-      #     node-version: ${{ matrix.node }}
-      #     cache: pnpm
-
-      - name: Install dependencies
-        run: pnpm i
-
-      - name: Build production assets
-        run: pnpm build
+      - run: pnpm i
+      - run: pnpm build
 
   publish:
     runs-on: ubuntu-latest
@@ -39,16 +27,14 @@ jobs:
     if: github.ref == 'refs/heads/master'
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v3
+      - uses: wyvox/action-setup-pnpm@v3
         with:
-          version: 8
-      - name: Use Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 21
-          cache: pnpm
+          node-version: ${{ matrix.node }}
+          pnpm-version: 8.15.4
+
       - run: pnpm i
       - run: pnpm build
+      
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

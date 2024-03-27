@@ -27,7 +27,7 @@ Having this boilerplate ready to run on your machine is as easy as typing:
 
 - JS and CSS transpilation and minification done by ESBuild (FAST)
 - CSS extraction using `mini-css-extract-plugin`
-- HTML generation using `html-webpack-plugin`
+- HTML generation using `html-bundler-webpack-plugin`
 - Examples:
   - Prefetched chunk, if you want to load faster critical parts of your build
   - Asynchronously loaded chunks, to block page rendering when loading/parsing/executing
