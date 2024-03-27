@@ -27,7 +27,7 @@ jobs:
     if: github.ref == 'refs/heads/master'
     steps:
       - uses: actions/checkout@v4
-      - uses: wyvox/action-setup-pnpm@master
+      - uses: wyvox/action-setup-pnpm@v3
         with:
           node-version: ${{ matrix.node }}
           pnpm-version: 8.15.4
