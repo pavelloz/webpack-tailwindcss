@@ -68,3 +68,4 @@ TODO
 
 - Write simple e2e test run on the example, after the deployment
 - Split webpack configs into common + dev/prod to avoid pushing to plugins array
+  - Add sourcemaps
