@@ -64,7 +64,7 @@ If for whatever reason you do not want this behavior here is [the documentation 
 
 ## Notes
 
-- Before every build, build directory (`dist`) is deleted to avoid deploying old assets
+- Before every build, build directory (`dist`) is deleted to avoid deploying assets from previous builds
 
 ## Additional resources
 
@@ -82,5 +82,3 @@ TODO
 ## TODO
 
 - Write simple e2e test run on the example, after the deployment
-- Split webpack configs into common + dev/prod to avoid pushing to plugins array
-  - Add sourcemaps
