@@ -4,11 +4,9 @@ const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
 
 const production = process.env.NODE_ENV === 'production';
 
-const OUTPUT_PATH = path.resolve('dist');
-
 const config = {
   output: {
-    path: OUTPUT_PATH,
+    path: path.resolve('dist'),
     chunkFilename: '[name].[chunkhash:4].js',
     clean: true, // clean the 'dist' directory before build
   },
@@ -36,16 +34,16 @@ const config = {
   },
   devServer: {
     static: {
-      directory: OUTPUT_PATH, // must be the same as output.path
+      directory: path.join(__dirname, 'dist'), // must be the same as output.path
     },
     watchFiles: {
       paths: ['src/**/*.*'],
     },
+    compress: true,
     port: 8888,
   },
-  devtool: production ? 'hidden-source-map' : 'inline-source-map',
   watchOptions: {
-    aggregateTimeout: 300,
+    aggregateTimeout: 200,
   },
   plugins: [
     new HtmlBundlerPlugin({
@@ -54,12 +52,14 @@ const config = {
         index: 'src/index.html', // => dist/index.html (key is output filename w/o '.html')
       },
       js: {
-        inline: true,
+        filename: 'js/[name].[contenthash:4].js',
+        inline: production, // inline JS for production mode, extract JS file for development mode
       },
       css: {
-        inline: true,
+        filename: 'css/[name].[contenthash:4].css',
+        inline: production, // inline CSS for production mode, extract CSS file for development mode
       },
-      minify: production, // minify html
+      minify: 'auto',
     }),
   ],
   mode: production ? 'production' : 'development',
@@ -67,15 +67,15 @@ const config = {
 };
 
 if (production) {
-	config.optimization = {
-		minimize: production,
-		minimizer: [
-			new EsbuildPlugin({
-				target: 'es2015',
-				css: true,
-			}),
-		],
-	};
+  config.optimization = {
+    minimize: production,
+    minimizer: [
+      new EsbuildPlugin({
+        target: 'es2015',
+        css: true,
+      }),
+    ],
+  };
 }
 
 module.exports = config;

@@ -1,5 +1,5 @@
-const module = (msg = 'Executed: Prefetched module!') => {
-  console.log(msg);
+const module = () => {
+  console.log('Hello from prefetched module!');
 };
 
 export default module;

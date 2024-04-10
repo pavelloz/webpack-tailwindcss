@@ -1,5 +1,5 @@
 const module = () => {
-  console.log('Executed: Deferred module!');
+  console.log('Hello from defered module!');
 };
 
 export default module;
