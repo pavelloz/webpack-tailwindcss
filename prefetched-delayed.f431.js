@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkwebpack_tailwindcss=globalThis.webpackChunkwebpack_tailwindcss||[]).push([[556],{965:(s,l,d)=>{d.r(l),d.d(l,{default:()=>e});var a=d(228);function e(){(0,a.A)("Executed: Prefetched delayed module!")}}}]);
