@@ -45,7 +45,7 @@ const config = {
   },
   devtool: production ? 'hidden-source-map' : 'inline-source-map',
   watchOptions: {
-    aggregateTimeout: 200,
+    aggregateTimeout: 300,
   },
   plugins: [
     new HtmlBundlerPlugin({
