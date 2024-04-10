@@ -1,3 +1,15 @@
+## 10 April 2024
+
+- Added sourceMaps (dev, prod)
+- Added non-delayed example of prefetched file
+- Changed `console.log` copy
+- Small cleanup in webpack config
+
+* `html-bundler-webpack-plugin`
+  - Always inline entry points (JS and CSS)
+  - No longer emits inlined files
+  - Improved readme to explain current behavior and how to customize it
+
 ## 17 March 2024
 
 - Improved examples

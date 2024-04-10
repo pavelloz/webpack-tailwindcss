@@ -1,9 +1,17 @@
-import(/* webpackChunkName: "defered-module" */ './defered-module').then((module) => module.default());
+import log from './log';
+import(/* webpackChunkName: "deferred" */ './deferred').then((module) => module.default());
 
-import(/* webpackChunkName: "prefetched-module", webpackPrefetch: true */ './prefetched-module').then((module) => {
-  setTimeout(() => {
-    module.default();
-  }, 2000);
-});
+// Uncomment this after `html-bundler-webpack-plugin` is fixed
+// import(/* webpackChunkName: "prefetched", webpackPrefetch: true */ './prefetched').then(({ default: run }) => {
+//   run();
+// });
 
-console.log('Hello from app.js');
+import(/* webpackChunkName: "prefetched-delayed", webpackPrefetch: true */ './prefetched-delayed').then(
+  ({ default: run }) => {
+    setTimeout(() => {
+      run();
+    }, 2000);
+  }
+);
+
+log('Executed: app.js');

@@ -4,9 +4,10 @@ const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
 
 const production = process.env.NODE_ENV === 'production';
 
+const DIST_DIR = path.resolve(__dirname, 'dist');
 const config = {
   output: {
-    path: path.resolve('dist'),
+    path: DIST_DIR,
     chunkFilename: '[name].[chunkhash:4].js',
     clean: true, // clean the 'dist' directory before build
   },
@@ -24,42 +25,44 @@ const config = {
         use: [{ loader: 'css-loader', options: { url: false } }, 'postcss-loader'],
       },
       {
-        test: /\.(ico|png|jp?g|svg)$/,
+        test: /\.(png|jp?g|svg)$/,
         type: 'asset/resource',
         generator: {
           filename: 'images/[name].[hash:4][ext]',
+        },
+      },
+      {
+        test: /\.ico$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'static/[name].[hash:4][ext]',
         },
       },
     ],
   },
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'), // must be the same as output.path
+      directory: DIST_DIR, // must be the same as output.path
     },
     watchFiles: {
       paths: ['src/**/*.*'],
     },
-    compress: true,
     port: 8888,
   },
   watchOptions: {
-    aggregateTimeout: 200,
+    aggregateTimeout: 300,
   },
   plugins: [
     new HtmlBundlerPlugin({
       // Documentation: https://github.com/webdiscus/html-bundler-webpack-plugin
-      entry: {
-        index: 'src/index.html', // => dist/index.html (key is output filename w/o '.html')
-      },
+      entry: 'src/',
       js: {
-        filename: 'js/[name].[contenthash:4].js',
         inline: production, // inline JS for production mode, extract JS file for development mode
       },
       css: {
-        filename: 'css/[name].[contenthash:4].css',
         inline: production, // inline CSS for production mode, extract CSS file for development mode
       },
-      minify: 'auto',
+      minify: 'auto', // minify html
     }),
   ],
   mode: production ? 'production' : 'development',
