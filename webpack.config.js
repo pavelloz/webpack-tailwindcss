@@ -1,7 +1,6 @@
 const path = require('path');
 const { EsbuildPlugin } = require('esbuild-loader');
 const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
-
 const production = process.env.NODE_ENV === 'production';
 
 const DIST_DIR = path.resolve(__dirname, 'dist');
@@ -57,10 +56,12 @@ const config = {
       // Documentation: https://github.com/webdiscus/html-bundler-webpack-plugin
       entry: 'src/',
       js: {
-        inline: production, // inline JS for production mode, extract JS file for development mode
+        inline: true,
+        chunkFilename: '[name].[chunkhash:4].js',
       },
       css: {
-        inline: production, // inline CSS for production mode, extract CSS file for development mode
+        inline: true,
+        chunkFilename: '[name].[chunkhash:4].css',
       },
       minify: 'auto', // minify html
     }),

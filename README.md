@@ -26,7 +26,6 @@ Having this boilerplate ready to run on your machine is as easy as typing:
 ## Webpack setup includes
 
 - JS and CSS transpilation and minification done by ESBuild (meaning: its FAST)
-- CSS extraction using `mini-css-extract-plugin`
 - HTML generation using `html-bundler-webpack-plugin`
 - SourceMaps:
   - In `development` mode: they are inlined to provide you the best development experience
