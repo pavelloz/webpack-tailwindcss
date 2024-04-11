@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkwebpack_tailwindcss=globalThis.webpackChunkwebpack_tailwindcss||[]).push([[529],{658:(u,s,l)=>{l.r(s),l.d(s,{default:()=>d});var a=l(228);function d(){(0,a.A)("Hello from prefetched module!")}}}]);
